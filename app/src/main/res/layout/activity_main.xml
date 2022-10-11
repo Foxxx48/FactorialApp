@@ -35,23 +35,20 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="490dp"
         android:padding="16dp"
         android:layout_margin="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button">
+
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="1000000" />
-
     </ScrollView>
-
-
 
 
     <androidx.constraintlayout.widget.Guideline
