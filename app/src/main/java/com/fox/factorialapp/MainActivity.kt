@@ -1,7 +1,6 @@
 package com.fox.factorialapp
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,7 +9,6 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.fox.factorialapp.Result
 import com.fox.factorialapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -65,8 +63,8 @@ class MainActivity : AppCompatActivity() {
                     ).show()
 
                 }
-                is Result -> {
-                    binding.textView.text = it.factorial
+                is Factorial -> {
+                    binding.textView.text = it.value
                 }
             }
         }
