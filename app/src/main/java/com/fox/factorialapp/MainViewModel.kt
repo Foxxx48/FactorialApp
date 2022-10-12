@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import java.math.BigInteger
 
 class MainViewModel : ViewModel() {
 
@@ -23,9 +24,17 @@ class MainViewModel : ViewModel() {
         }
         viewModelScope.launch {
             val number = value.toLong()
-            delay(1000)
-            _state.value = Result(number.toString())
+            val result = factorial(number)
+            _state.value = Result(result.toString())
         }
+    }
+
+    private fun factorial(number: Long): BigInteger {
+        var result = BigInteger.ONE
+        for (i in 1 .. number) {
+           result *= BigInteger.valueOf(i)
+        }
+        return result
     }
 
 
